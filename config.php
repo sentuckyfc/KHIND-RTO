@@ -6,7 +6,12 @@
 // Tetapan Laman
 define('SITE_NAME', 'KHIND Rent-To-Own');
 define('SITE_TAGLINE', 'Pelan Ansuran Barangan Elektrik Mudah Milik');
-define('SITE_URL', 'http://localhost/KHIND-RTO');
+
+// Auto-detect SITE_URL based on current domain
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
+$host = $_SERVER['HTTP_HOST'] ?? 'localhost';
+$scriptDir = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/\\');
+define('SITE_URL', $protocol . '://' . $host . $scriptDir);
 
 // Tetapan Default Ejen
 define('DEFAULT_AGENT_NAME', 'KHIND RTO');
