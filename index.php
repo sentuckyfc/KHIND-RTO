@@ -18,9 +18,9 @@ include 'includes/header.php';
             </div>
             
             <h1 class="hero-title">
-                <span class="title-line">Barangan Elektrik</span>
+                <span class="title-line">Barangan Penuaan Hidup</span>
                 <span class="title-line title-gradient">Mudah Milik.</span>
-                <span class="title-line title-light">Hidup Lebih Senang.</span>
+                <span class="title-line title-light">Hidup Lebih Senang dan tak tenang.</span>
             </h1>
             
             <p class="hero-subtitle">
