@@ -52,7 +52,7 @@ include 'includes/header.php';
                 <!-- Product card -->
                 <div class="showcase-product-card">
                     <span class="showcase-tag">Paling Popular</span>
-                    <img src="https://khind.pro/wp-content/uploads/2025/06/68543c149d09e5a129fdef63_aircond-stand-768x532-1.png" alt="KHIND KOOL Series Aircond" onerror="this.src='https://khind.pro/wp-content/uploads/2025/06/RFS600A.png'">
+                    <img src="Image/Washer1.png" alt="KHIND Dryer">
                     <div class="showcase-price">
                         <span class="showcase-from">Serendah</span>
                         <span class="showcase-amount">RM<b>55</b></span>

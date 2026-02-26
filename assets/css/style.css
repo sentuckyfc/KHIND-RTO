@@ -641,19 +641,20 @@ h4 { font-size: 1.125rem; }
     position: relative;
     background: linear-gradient(160deg, #fffef5 0%, #fff8e1 100%);
     border-radius: var(--rounded-xl);
-    padding: 32px 32px 48px;
+    padding: 28px 28px 56px;
     text-align: center;
     border: 1px solid rgba(245, 197, 24, 0.18);
     transition: var(--transition);
+    overflow: visible;
 }
 
 .showcase-product-card:hover {
-    box-shadow: 0 8px 32px rgba(245, 197, 24, 0.12);
+    box-shadow: 0 12px 40px rgba(245, 197, 24, 0.15);
 }
 
 .showcase-tag {
     display: inline-block;
-    padding: 5px 14px;
+    padding: 6px 16px;
     background: var(--secondary);
     color: var(--white);
     font-size: 0.68rem;
@@ -662,35 +663,46 @@ h4 { font-size: 1.125rem; }
     text-transform: uppercase;
     letter-spacing: 0.8px;
     margin-bottom: 16px;
+    position: relative;
+    z-index: 2;
 }
 
 .showcase-product-card img {
-    max-width: 280px;
-    height: 180px;
+    display: block;
+    width: 70%;
+    max-width: 240px;
+    height: auto;
     object-fit: contain;
     margin: 0 auto;
-    filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.08));
+    border-radius: 0;
     transition: transform 0.4s ease;
+    box-shadow: none;
+    mix-blend-mode: multiply;
+    filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.1));
 }
 
 .showcase-product-card:hover img {
-    transform: translateY(-6px);
+    transform: translateY(-4px) scale(1.02);
 }
 
 /* Price pill */
 .showcase-price {
     position: absolute;
-    bottom: -18px;
+    bottom: -20px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     align-items: baseline;
     gap: 5px;
-    padding: 11px 28px;
+    padding: 12px 30px;
     background: var(--secondary);
     border-radius: var(--rounded-full);
     white-space: nowrap;
-    box-shadow: 0 4px 16px rgba(26, 26, 46, 0.2);
+    box-shadow: 0 6px 24px rgba(26, 26, 46, 0.25);
+    z-index: 3;
+}
+    box-shadow: 0 6px 20px rgba(26, 26, 46, 0.3);
+    z-index: 3;
 }
 
 .showcase-from {
@@ -2507,12 +2519,13 @@ h4 { font-size: 1.125rem; }
     }
     
     .showcase-product-card {
-        padding: 24px 20px 44px;
+        padding: 20px 16px 48px;
     }
     
     .showcase-product-card img {
-        max-width: 220px;
-        height: 150px;
+        width: 80%;
+        max-width: 200px;
+        height: auto;
     }
     
     .title-line {
