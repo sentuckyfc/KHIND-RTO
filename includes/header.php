@@ -38,7 +38,7 @@ $currentPage = basename($_SERVER['PHP_SELF'], '.php');
 <!-- Notification Toast -->
 <div class="notification-toast" id="notifToast">
     <div class="toast-icon">
-        <img src="https://khind.pro/wp-content/uploads/2025/07/6747ddc200a7b28d5aedcc66_turning-RTO.png" alt="KHIND" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2240%22 height=%2240%22><rect fill=%22%23f5c518%22 width=%2240%22 height=%2240%22 rx=%2220%22/><text x=%2250%%22 y=%2255%%22 text-anchor=%22middle%22 fill=%22%23000%22 font-size=%2216%22 font-weight=%22bold%22>K</text></svg>'">
+        <img src="https://khind.pro/wp-content/uploads/2025/07/6747ddc200a7b28d5aedcc66_turning-RTO.png" alt="KHIND" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2240%22 height=%2240%22><rect fill=%22%23f2c213%22 width=%2240%22 height=%2240%22 rx=%2220%22/><text x=%2250%%22 y=%2255%%22 text-anchor=%22middle%22 fill=%22%23000%22 font-size=%2216%22 font-weight=%22bold%22>K</text></svg>'">
     </div>
     <div class="toast-content">
         <strong id="toastName">Ahmad</strong> dari <span id="toastLocation">Kuala Lumpur</span>

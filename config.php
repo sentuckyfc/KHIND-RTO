@@ -19,7 +19,7 @@ define('DEFAULT_AGENT_PHONE', '60123456789');
 define('DEFAULT_AGENT_WHATSAPP', '60123456789');
 
 // Warna Tema
-define('PRIMARY_COLOR', '#f5c518');    // Kuning KHIND
+define('PRIMARY_COLOR', '#f2c213');    // Oren KHIND
 define('SECONDARY_COLOR', '#1a1a2e'); // Gelap
 define('ACCENT_COLOR', '#e63946');    // Merah CTA
 
