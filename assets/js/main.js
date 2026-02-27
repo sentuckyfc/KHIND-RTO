@@ -28,19 +28,57 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 /**
- * Navbar scroll effect
+ * Navbar scroll effect - hide on scroll down, show on scroll up (Dynamic Island)
  */
 function initNavbar() {
     const navbar = document.getElementById('navbar');
     if (!navbar) return;
     
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 30) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    const scrollThreshold = 10;
+    const showAtTop = 80;
+    
+    // References for closing mobile menu on hide
+    const toggle = document.getElementById('navToggle');
+    const menu = document.getElementById('navMenu');
+    
+    function closeMobileMenu() {
+        if (toggle && menu) {
+            toggle.classList.remove('active');
+            menu.classList.remove('active');
         }
-    });
+    }
+    
+    function updateNavbar() {
+        const currentScrollY = window.scrollY;
+        const scrollDelta = currentScrollY - lastScrollY;
+        
+        if (currentScrollY <= showAtTop) {
+            // At the top - always show, remove hidden class
+            navbar.classList.remove('nav-hidden');
+            navbar.classList.remove('nav-visible');
+        } else if (scrollDelta > scrollThreshold) {
+            // Scrolling DOWN - hide & close mobile menu
+            navbar.classList.add('nav-hidden');
+            navbar.classList.remove('nav-visible');
+            closeMobileMenu();
+        } else if (scrollDelta < -scrollThreshold) {
+            // Scrolling UP - show
+            navbar.classList.remove('nav-hidden');
+            navbar.classList.add('nav-visible');
+        }
+        
+        lastScrollY = currentScrollY;
+        ticking = false;
+    }
+    
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            window.requestAnimationFrame(updateNavbar);
+            ticking = true;
+        }
+    }, { passive: true });
 }
 
 /**

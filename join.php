@@ -9,7 +9,7 @@ include 'includes/header.php';
 <section class="page-hero join-hero">
     <div class="container">
         <div class="page-hero-content" data-aos="fade-up">
-            <span class="section-badge light">Peluang Kerjaya</span>
+            <span class="section-badge">Peluang Kerjaya</span>
             <h1>Jadi Ejen KHIND RTO</h1>
             <p>Jana pendapatan lumayan sebagai Ejen Jualan Sah KHIND Rent-To-Own</p>
         </div>
