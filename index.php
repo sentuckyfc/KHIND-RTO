@@ -9,6 +9,11 @@ include 'includes/header.php';
 <section class="hero-section">
     <div class="hero-mesh"></div>
     
+    <!-- Decorative floating shapes -->
+    <div class="hero-deco hero-deco-1"></div>
+    <div class="hero-deco hero-deco-2"></div>
+    <div class="hero-deco hero-deco-3"></div>
+    
     <div class="container hero-container">
         <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
             <div class="hero-eyebrow">
@@ -100,7 +105,7 @@ include 'includes/header.php';
                         </div>
                     </div>
                     <div class="showcase-feat">
-                        <div class="feat-icon feat-yellow"><i class="fas fa-tools"></i></div>
+                        <div class="feat-icon feat-yellow"><i class="fas fa-wrench"></i></div>
                         <div class="feat-text">
                             <strong>Waranti Penuh</strong>
                             <span>Servis Berjadual</span>
@@ -402,7 +407,7 @@ include 'includes/header.php';
     <div class="container">
         <div class="form-wrapper" data-aos="fade-up">
             <div class="form-content">
-                <span class="section-badge light">Berminat?</span>
+                <span class="section-badge">Berminat?</span>
                 <h2>Berminat Untuk Rent-To-Own?</h2>
                 <p>Isi borang ringkas ini dan ejen kami akan menghubungi anda segera!</p>
                 
