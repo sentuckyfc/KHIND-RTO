@@ -1,0 +1,13 @@
+Options -Indexes
+RewriteEngine On
+
+# Redirect old .php URLs to clean URLs (301 permanent)
+RewriteRule ^catalog\.php$ /catalog [R=301,L]
+RewriteRule ^join\.php$ /join [R=301,L]
+
+# Allow direct access to real files and directories
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Route everything else through the front controller
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]

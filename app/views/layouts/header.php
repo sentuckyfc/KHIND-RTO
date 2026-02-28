@@ -1,6 +1,5 @@
 <?php
-$agent = getAgentInfo();
-$currentPage = basename($_SERVER['PHP_SELF'], '.php');
+$_currentPage = currentPage();
 ?>
 <!DOCTYPE html>
 <html lang="ms">
@@ -9,23 +8,23 @@ $currentPage = basename($_SERVER['PHP_SELF'], '.php');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= SITE_NAME ?> | <?= SITE_TAGLINE ?></title>
     <meta name="description" content="KHIND Rent-To-Own Malaysia - Pelan ansuran barangan elektrik mudah milik. Aircond, Mesin Basuh, Peti Sejuk dan banyak lagi!">
-    
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
+
     <!-- AOS Animations -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    
+
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    
+
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="<?= SITE_URL ?>/assets/css/style.css">
+    <link rel="stylesheet" href="<?= asset('css/style.css') ?>">
 </head>
 <body>
 
@@ -50,24 +49,24 @@ $currentPage = basename($_SERVER['PHP_SELF'], '.php');
 <!-- Navigation -->
 <nav class="navbar" id="navbar">
     <div class="container nav-container">
-        <a href="<?= SITE_URL ?>/" class="nav-logo">
+        <a href="<?= url() ?>" class="nav-logo">
             <span class="logo-icon">K</span>
             <div class="logo-text">
                 <strong>KHIND</strong>
                 <small>RENT-TO-OWN</small>
             </div>
         </a>
-        
+
         <div class="nav-menu" id="navMenu">
-            <a href="<?= SITE_URL ?>/" class="nav-link <?= $currentPage == 'index' ? 'active' : '' ?>">Utama</a>
-            <a href="<?= SITE_URL ?>/catalog.php<?= !empty($_GET['agent']) ? '?agent='.$_GET['agent'] : '' ?>" class="nav-link <?= $currentPage == 'catalog' ? 'active' : '' ?>">Katalog</a>
+            <a href="<?= url() ?>" class="nav-link <?= $_currentPage === 'home' ? 'active' : '' ?>">Utama</a>
+            <a href="<?= url('catalog') ?>" class="nav-link <?= $_currentPage === 'catalog' ? 'active' : '' ?>">Katalog</a>
             <a href="#kenapa-khind" class="nav-link">Kenapa KHIND</a>
             <a href="#hubungi" class="nav-link">Hubungi</a>
-            <a href="<?= SITE_URL ?>/join.php<?= !empty($_GET['agent']) ? '?agent='.$_GET['agent'] : '' ?>" class="nav-link nav-cta">
+            <a href="<?= url('join') ?>" class="nav-link nav-cta <?= $_currentPage === 'join' ? 'active' : '' ?>">
                 <i class="fas fa-users"></i> Jadi Ejen
             </a>
         </div>
-        
+
         <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu">
             <span></span><span></span><span></span>
         </button>

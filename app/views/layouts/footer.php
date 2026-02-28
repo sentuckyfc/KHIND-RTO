@@ -5,7 +5,7 @@
             <span class="section-badge">Penasihat Jualan</span>
             <h2>KHIND RTO</h2>
         </div>
-        
+
         <div class="agent-card" data-aos="fade-up" data-aos-delay="100">
             <div class="agent-avatar">
                 <?php if (!empty($agent['image'])): ?>
@@ -19,15 +19,15 @@
                     <span class="status-dot"></span> Online
                 </div>
             </div>
-            
+
             <h3 class="agent-name"><?= $agent['name'] ?></h3>
             <span class="agent-title"><?= $agent['title'] ?></span>
-            
+
             <p class="agent-desc">
-                Sebagai ejen jualan yang berpengalaman dan terlatih, saya komited membantu anda 
+                Sebagai ejen jualan yang berpengalaman dan terlatih, saya komited membantu anda
                 memiliki barangan Khind dengan cepat dan mudah melalui pelan Rent-To-Own yang fleksibel.
             </p>
-            
+
             <div class="agent-contact-info">
                 <div class="contact-label">PERTANYAAN PRODUK</div>
                 <a href="tel:+<?= $agent['phone'] ?>" class="agent-phone">
@@ -35,7 +35,7 @@
                 </a>
                 <div class="contact-sublabel">(Pertanyaan, Sebut Harga & Pembelian Produk)</div>
             </div>
-            
+
             <div class="agent-actions">
                 <a href="<?= getWhatsAppLink($agent['whatsapp']) ?>" target="_blank" class="btn btn-whatsapp btn-lg">
                     <i class="fab fa-whatsapp"></i>
@@ -60,7 +60,7 @@
                 <span class="section-badge light">Peluang Kerjaya</span>
                 <h2>Nak Jana Pendapatan Bersama KHIND?</h2>
                 <p>Anda mahukan pendapatan tambahan dengan cara yang mudah dan menguntungkan? KHIND menawarkan peluang untuk anda! Sesuai untuk sesiapa sahaja yang mahu kewangan lebih stabil.</p>
-                <a href="<?= SITE_URL ?>/join.php<?= !empty($_GET['agent']) ? '?agent='.$_GET['agent'] : '' ?>" class="btn btn-primary btn-lg">
+                <a href="<?= url('join') ?>" class="btn btn-primary btn-lg">
                     <i class="fas fa-rocket"></i> Sertai Sekarang
                 </a>
             </div>
@@ -94,7 +94,7 @@
                 <h2>Jenama Dipercayai Sejak 1961</h2>
                 <p>KHIND bukan nama baru — KHIND adalah jenama yang paling dipercayai di Malaysia. Terkenal dengan peralatan rumah yang mampu milik dan berkualiti tinggi, direka khas untuk memenuhi keperluan harian.</p>
                 <p>Dengan ciri-ciri inovatif, setiap peralatan KHIND bukan sahaja menjimatkan tenaga, tetapi juga memudahkan gaya hidup keluarga. Hidup lebih senang, hati pun lebih tenang — dan semuanya bermula dengan KHIND.</p>
-                
+
                 <div class="about-stats">
                     <div class="about-stat">
                         <i class="fas fa-globe-asia"></i>
@@ -147,23 +147,23 @@
                     <a href="#"><i class="fab fa-tiktok"></i></a>
                 </div>
             </div>
-            
+
             <div class="footer-links">
                 <h4>Pautan Pantas</h4>
-                <a href="<?= SITE_URL ?>/">Utama</a>
-                <a href="<?= SITE_URL ?>/catalog.php">Katalog Produk</a>
-                <a href="<?= SITE_URL ?>/join.php">Jadi Ejen</a>
+                <a href="<?= url() ?>">Utama</a>
+                <a href="<?= url('catalog') ?>">Katalog Produk</a>
+                <a href="<?= url('join') ?>">Jadi Ejen</a>
                 <a href="#hubungi">Hubungi Kami</a>
             </div>
-            
+
             <div class="footer-links">
                 <h4>Produk</h4>
-                <a href="<?= SITE_URL ?>/catalog.php#aircond">Aircond</a>
-                <a href="<?= SITE_URL ?>/catalog.php#washer">Mesin Basuh</a>
-                <a href="<?= SITE_URL ?>/catalog.php#fridge">Peti Sejuk</a>
-                <a href="<?= SITE_URL ?>/catalog.php#iron">Seterika</a>
+                <a href="<?= url('catalog') ?>#aircond">Aircond</a>
+                <a href="<?= url('catalog') ?>#washer">Mesin Basuh</a>
+                <a href="<?= url('catalog') ?>#fridge">Peti Sejuk</a>
+                <a href="<?= url('catalog') ?>#iron">Seterika</a>
             </div>
-            
+
             <div class="footer-contact">
                 <h4>Hubungi</h4>
                 <a href="<?= getWhatsAppLink($agent['whatsapp']) ?>" target="_blank">
@@ -174,7 +174,7 @@
                 </a>
             </div>
         </div>
-        
+
         <div class="footer-bottom">
             <p>Copyright &copy; <?= date('Y') ?> | Laman ini bukan laman rasmi Khind Malaysia tetapi diuruskan oleh Ejen Sah Khind bagi tujuan promosi dan jualan.</p>
         </div>
@@ -184,6 +184,6 @@
 <!-- Scripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="<?= SITE_URL ?>/assets/js/main.js"></script>
+<script src="<?= asset('js/main.js') ?>"></script>
 </body>
 </html>
