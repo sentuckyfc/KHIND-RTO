@@ -72,3 +72,6 @@ $_currentPage = currentPage();
         </button>
     </div>
 </nav>
+
+<!-- Mobile menu overlay -->
+<div class="nav-menu-overlay" id="navMenuOverlay"></div>
