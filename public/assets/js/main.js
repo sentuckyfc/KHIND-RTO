@@ -42,11 +42,14 @@ function initNavbar() {
     // References for closing mobile menu on hide
     const toggle = document.getElementById('navToggle');
     const menu = document.getElementById('navMenu');
+    const overlay = document.getElementById('navMenuOverlay');
     
     function closeMobileMenu() {
         if (toggle && menu) {
             toggle.classList.remove('active');
             menu.classList.remove('active');
+            if (overlay) overlay.classList.remove('active');
+            document.body.classList.remove('menu-open');
         }
     }
     
@@ -87,26 +90,45 @@ function initNavbar() {
 function initMobileMenu() {
     const toggle = document.getElementById('navToggle');
     const menu = document.getElementById('navMenu');
+    const overlay = document.getElementById('navMenuOverlay');
     if (!toggle || !menu) return;
+
+    function openMenu() {
+        toggle.classList.add('active');
+        menu.classList.add('active');
+        if (overlay) overlay.classList.add('active');
+        document.body.classList.add('menu-open');
+    }
+
+    function closeMenu() {
+        toggle.classList.remove('active');
+        menu.classList.remove('active');
+        if (overlay) overlay.classList.remove('active');
+        document.body.classList.remove('menu-open');
+    }
     
     toggle.addEventListener('click', function() {
-        toggle.classList.toggle('active');
-        menu.classList.toggle('active');
+        if (menu.classList.contains('active')) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
     });
     
     // Close menu when clicking a link
     menu.querySelectorAll('.nav-link').forEach(function(link) {
         link.addEventListener('click', function() {
-            toggle.classList.remove('active');
-            menu.classList.remove('active');
+            closeMenu();
         });
     });
     
-    // Close menu when clicking outside
+    // Close menu when clicking overlay or outside
+    if (overlay) {
+        overlay.addEventListener('click', closeMenu);
+    }
     document.addEventListener('click', function(e) {
         if (!toggle.contains(e.target) && !menu.contains(e.target)) {
-            toggle.classList.remove('active');
-            menu.classList.remove('active');
+            closeMenu();
         }
     });
 }
