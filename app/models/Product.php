@@ -50,7 +50,7 @@ class Product {
                         'subtitle' => 'KHIND Washer Dryer',
                         'price_monthly' => 63,
                         'price_original' => 125,
-                        'image' => 'WD1468.jpg',
+                        'image' => 'WD1468.png',
                         'features' => ['2-in-1 Basuh & Kering', '11KG Basuh / 7KG Kering', 'Inverter Motor', 'Steam Wash'],
                         'desc' => 'Kapasiti lebih besar untuk keluarga besar dengan teknologi Steam Wash.',
                     ],
