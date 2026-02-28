@@ -220,9 +220,8 @@ h4 { font-size: 1.125rem; }
     top: 16px;
     left: 50%;
     transform: translateX(-50%) translateY(0);
-    width: auto;
+    width: calc(100% - 32px);
     max-width: 920px;
-    min-width: 680px;
     height: 56px;
     background: rgba(45, 52, 54, 0.75);
     backdrop-filter: blur(24px) saturate(180%);
@@ -2904,6 +2903,8 @@ h4 { font-size: 1.125rem; }
         top: 68px;
         left: 16px;
         right: 16px;
+    }
+
     .nav-toggle span {
         width: 18px;
     }
