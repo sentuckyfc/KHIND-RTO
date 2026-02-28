@@ -1,10 +1,3 @@
-<?php
-require_once 'config.php';
-$products = getProducts();
-$agent = getAgentInfo();
-include 'includes/header.php';
-?>
-
 <!-- Catalog Hero -->
 <section class="page-hero">
     <div class="container">
@@ -44,7 +37,7 @@ include 'includes/header.php';
                     <p><?= count($cat['items']) ?> produk tersedia</p>
                 </div>
             </div>
-            
+
             <div class="catalog-products-grid">
                 <?php foreach ($cat['items'] as $product): ?>
                 <div class="product-card-full" data-aos="fade-up">
@@ -56,18 +49,18 @@ include 'includes/header.php';
                         PROMO -<?= round((1 - $product['price_monthly']/$product['price_original']) * 100) ?>%
                     </div>
                     <?php endif; ?>
-                    
+
                     <div class="product-card-full-inner">
                         <div class="product-image-full">
-                            <img src="<?= $product['image'] ?>" alt="<?= $product['name'] ?>" loading="lazy" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22><rect fill=%22%23f8f8f8%22 width=%22400%22 height=%22400%22/><text x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 fill=%22%23999%22 font-size=%2216%22><?= urlencode($product['model']) ?></text></svg>'">
+                            <img src="<?= image($product['image']) ?>" alt="<?= $product['name'] ?>" loading="lazy" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22400%22><rect fill=%22%23f8f8f8%22 width=%22400%22 height=%22400%22/><text x=%2250%%22 y=%2250%%22 text-anchor=%22middle%22 fill=%22%23999%22 font-size=%2216%22><?= urlencode($product['model']) ?></text></svg>'">
                         </div>
-                        
+
                         <div class="product-detail-full">
                             <span class="product-subtitle"><?= $product['subtitle'] ?></span>
                             <h3 class="product-model-full"><?= $product['model'] ?></h3>
                             <p class="product-name-full"><?= $product['name'] ?></p>
                             <p class="product-desc"><?= $product['desc'] ?></p>
-                            
+
                             <div class="product-features-full">
                                 <?php foreach ($product['features'] as $feat): ?>
                                 <div class="feature-item-full">
@@ -75,7 +68,7 @@ include 'includes/header.php';
                                 </div>
                                 <?php endforeach; ?>
                             </div>
-                            
+
                             <?php if (!empty($product['capacity'])): ?>
                             <div class="product-variants">
                                 <span class="variant-label">Pilihan:</span>
@@ -84,7 +77,7 @@ include 'includes/header.php';
                                 <?php endforeach; ?>
                             </div>
                             <?php endif; ?>
-                            
+
                             <div class="product-price-full">
                                 <span class="price-label">Bulanan Serendah</span>
                                 <div class="price-row-full">
@@ -96,7 +89,7 @@ include 'includes/header.php';
                                 </div>
                                 <small class="price-note">*Harga promosi, tertakluk kepada terma & syarat</small>
                             </div>
-                            
+
                             <div class="product-actions-full">
                                 <a href="<?= getWhatsAppLink($agent['whatsapp'], 'Hai, Saya berminat dengan ' . $product['model'] . ' - ' . $product['name'] . ' secara RTO. Boleh berikan maklumat lanjut?') ?>" target="_blank" class="btn btn-whatsapp">
                                     <i class="fab fa-whatsapp"></i> Tanya Sekarang
@@ -105,7 +98,7 @@ include 'includes/header.php';
                                     <i class="fas fa-shopping-cart"></i> Mohon RTO
                                 </a>
                             </div>
-                            
+
                             <div class="product-guarantees">
                                 <span><i class="fas fa-truck"></i> Hantar Percuma</span>
                                 <span><i class="fas fa-tools"></i> Pasang Percuma</span>
@@ -121,5 +114,3 @@ include 'includes/header.php';
         <?php endforeach; ?>
     </div>
 </section>
-
-<?php include 'includes/footer.php'; ?>

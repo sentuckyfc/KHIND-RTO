@@ -1,10 +1,3 @@
-<?php
-require_once 'config.php';
-$products = getProducts();
-$agent = getAgentInfo();
-include 'includes/header.php';
-?>
-
 <!-- Join Hero -->
 <section class="page-hero join-hero">
     <div class="container">
@@ -24,7 +17,7 @@ include 'includes/header.php';
             <h2>Kelebihan Menjadi Ejen KHIND RTO</h2>
             <p>Peluang perniagaan tanpa modal besar — hanya perlukan semangat dan komitmen!</p>
         </div>
-        
+
         <div class="join-benefits-grid">
             <div class="join-benefit-card" data-aos="fade-up" data-aos-delay="0">
                 <div class="join-benefit-icon">
@@ -79,7 +72,7 @@ include 'includes/header.php';
             <span class="section-badge">Langkah Demi Langkah</span>
             <h2>Macamana Nak Jadi Ejen?</h2>
         </div>
-        
+
         <div class="join-steps-grid">
             <div class="join-step" data-aos="fade-up" data-aos-delay="0">
                 <div class="join-step-number">01</div>
@@ -113,7 +106,7 @@ include 'includes/header.php';
                 <span class="section-badge">Daftar Sekarang</span>
                 <h2>Sertai Pasukan Kami</h2>
                 <p>Isi maklumat anda dan kami akan menghubungi anda untuk proses seterusnya.</p>
-                
+
                 <form class="rto-form" id="joinForm" onsubmit="handleJoinSubmit(event)">
                     <div class="form-row">
                         <div class="form-group">
@@ -176,7 +169,7 @@ include 'includes/header.php';
                     </button>
                 </form>
             </div>
-            
+
             <div class="join-form-sidebar">
                 <div class="sidebar-card">
                     <div class="sidebar-icon"><i class="fas fa-headset"></i></div>
@@ -186,7 +179,7 @@ include 'includes/header.php';
                         <i class="fab fa-whatsapp"></i> Chat Sekarang
                     </a>
                 </div>
-                
+
                 <div class="sidebar-testimonial">
                     <div class="testimonial-quote">
                         <i class="fas fa-quote-left"></i>
@@ -201,5 +194,3 @@ include 'includes/header.php';
         </div>
     </div>
 </section>
-
-<?php include 'includes/footer.php'; ?>
