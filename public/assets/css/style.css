@@ -1542,8 +1542,8 @@ h4 { font-size: 1.125rem; }
 }
 
 .comparison-table thead th {
-    padding: 18px 20px;
-    font-size: 0.9rem;
+    padding: 8px 12px;
+    font-size: 0.78rem;
     font-weight: 700;
     text-align: center;
     background: var(--charcoal);
@@ -1561,10 +1561,10 @@ h4 { font-size: 1.125rem; }
 }
 
 .comparison-table tbody td {
-    padding: 14px 20px;
+    padding: 9px 14px;
     border-bottom: 1px solid var(--gray-200);
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 0.82rem;
     color: var(--charcoal);
 }
 
@@ -1591,7 +1591,7 @@ h4 { font-size: 1.125rem; }
 
 .comparison-table .text-success,
 .comparison-table .text-danger {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
 }
 
 /* ---------- Form Section ---------- */
