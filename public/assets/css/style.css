@@ -1559,15 +1559,17 @@ h4 { font-size: 1.125rem; }
 .comparison-table thead .khind-col {
     background: var(--primary);
     color: var(--white);
+    white-space: nowrap;
 }
 
 .comparison-table thead .khind-col .logo-icon.small {
-    display: inline-flex;
+    display: inline-flex !important;
     vertical-align: middle;
-    width: 18px;
-    height: 18px;
-    font-size: 0.65rem;
-    margin-right: 4px;
+    width: 16px;
+    height: 16px;
+    font-size: 0.6rem;
+    margin-right: 3px;
+    margin-bottom: 0;
 }
 
 .comparison-table tbody td {

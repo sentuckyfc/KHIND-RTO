@@ -332,9 +332,7 @@
                 <thead>
                     <tr>
                         <th>Ciri-ciri</th>
-                        <th class="khind-col">
-                            <span class="logo-icon small">K</span> KHIND RTO
-                        </th>
+                        <th class="khind-col">KHIND RTO</th>
                         <th>Jenama Lain</th>
                     </tr>
                 </thead>
