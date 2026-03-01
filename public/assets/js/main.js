@@ -25,6 +25,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Smooth scroll
     initSmoothScroll();
+
+    // Detail Plans toggles
+    initDetailPlans();
 });
 
 /**
@@ -349,6 +352,43 @@ function animateCounters() {
                 counter.textContent = Math.floor(current).toLocaleString() + suffix;
             }
         }, 30);
+    });
+}
+
+/**
+ * Detail Plans accordion toggle
+ */
+function initDetailPlans() {
+    document.addEventListener('click', function(e) {
+        var toggle = e.target.closest('.detail-plans-toggle');
+        if (!toggle) return;
+        e.preventDefault();
+        var panel = toggle.nextElementSibling;
+        if (!panel || !panel.classList.contains('detail-plans-panel')) return;
+
+        var isOpen = toggle.classList.contains('active');
+
+        if (isOpen) {
+            // Close
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+            // Force reflow then set to 0
+            panel.offsetHeight;
+            panel.style.maxHeight = '0';
+            toggle.classList.remove('active');
+            panel.classList.remove('open');
+        } else {
+            // Open
+            toggle.classList.add('active');
+            panel.classList.add('open');
+            panel.style.maxHeight = panel.scrollHeight + 'px';
+            // After transition, let it grow naturally
+            panel.addEventListener('transitionend', function handler() {
+                if (panel.classList.contains('open')) {
+                    panel.style.maxHeight = 'none';
+                }
+                panel.removeEventListener('transitionend', handler);
+            });
+        }
     });
 }
 

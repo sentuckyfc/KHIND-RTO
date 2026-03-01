@@ -266,6 +266,8 @@
                                 <i class="fas fa-info-circle"></i> Info
                             </button>
                         </div>
+
+                        <?php include __DIR__ . '/../partials/detail_plans.php'; ?>
                     </div>
                 </div>
                 <?php endforeach; ?>

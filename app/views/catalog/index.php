@@ -107,6 +107,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <?php include __DIR__ . '/../partials/detail_plans.php'; ?>
                 </div>
                 <?php endforeach; ?>
             </div>

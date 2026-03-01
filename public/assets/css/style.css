@@ -3844,3 +3844,312 @@ h4 { font-size: 1.125rem; }
     background: var(--primary);
     color: var(--white);
 }
+
+/* ==========================================================================
+   DETAIL PLANS DROPDOWN
+   ========================================================================== */
+
+/* -- Toggle Button -- */
+.detail-plans-wrapper {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.detail-plans-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 14px 24px;
+    background: #ffc107;
+    color: #1a1a2e;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+    font-family: inherit;
+}
+
+.detail-plans-toggle:hover {
+    background: #e0a800;
+    transform: translateY(-1px);
+}
+
+.detail-plans-toggle i {
+    transition: transform 0.35s ease;
+    font-size: 0.85rem;
+}
+
+.detail-plans-toggle.active i {
+    transform: rotate(180deg);
+}
+
+/* -- Collapsible Panel -- */
+.detail-plans-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.detail-plans-inner {
+    margin-top: 16px;
+    background: #1a1a2e;
+    border-radius: 16px;
+    padding: 24px 16px 20px;
+    overflow: hidden;
+}
+
+/* -- Badges Row (Free Install / Free Delivery) -- */
+.detail-plans-badges {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.dp-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffc107;
+    font-weight: 700;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.dp-badge i {
+    font-size: 1.2rem;
+}
+
+/* -- Group Label (e.g. "Rent-To-Own (RTO)") -- */
+.dp-group-label {
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 12px;
+    padding: 8px 0;
+    letter-spacing: 0.5px;
+}
+
+/* -- Plan Table -- */
+.detail-plans-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #fff;
+    font-size: 0.85rem;
+    table-layout: fixed;
+}
+
+.detail-plans-table th,
+.detail-plans-table td {
+    padding: 12px 10px;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Label column (left side) */
+.dp-label-cell {
+    text-align: left;
+    font-weight: 600;
+    color: #ccc;
+    width: 28%;
+    font-size: 0.82rem;
+    padding-left: 16px;
+}
+
+/* Header group row (Outright / RTO labels) */
+.dp-header-group th {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: rgba(255,255,255,0.55);
+    padding-bottom: 4px;
+    border-bottom: none;
+    font-weight: 600;
+}
+
+/* Plans pricing row */
+.dp-header-plans th {
+    background: rgba(255, 193, 7, 0.08);
+    border-bottom: 2px solid rgba(255,193,7,0.3);
+}
+
+.dp-plan-price {
+    color: #ffc107;
+    font-size: 1.05rem;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.dp-plan-price strong {
+    font-size: 1.15rem;
+}
+
+.dp-plan-sub {
+    color: rgba(255,255,255,0.5);
+    font-size: 0.72rem;
+    margin-top: 2px;
+    line-height: 1.4;
+}
+
+/* Data cells */
+.dp-value-cell {
+    color: #fff;
+    font-weight: 500;
+    font-size: 0.84rem;
+}
+
+.dp-value-cell.dp-span {
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.dp-note {
+    color: rgba(255,255,255,0.45);
+    font-size: 0.7rem;
+    font-weight: 400;
+    margin-top: 4px;
+    line-height: 1.4;
+}
+
+/* Alternating row stripes */
+.detail-plans-table tbody tr:nth-child(even) {
+    background: rgba(255,255,255,0.03);
+}
+
+.detail-plans-table tbody tr:hover {
+    background: rgba(255,193,7,0.05);
+}
+
+/* -- Home page compact card adjustments -- */
+.product-card .detail-plans-wrapper {
+    margin-top: 16px;
+}
+
+.product-card .detail-plans-inner {
+    padding: 18px 10px 14px;
+}
+
+.product-card .detail-plans-table {
+    font-size: 0.78rem;
+}
+
+.product-card .dp-label-cell {
+    font-size: 0.75rem;
+    width: 30%;
+    padding-left: 10px;
+}
+
+.product-card .dp-plan-price {
+    font-size: 0.9rem;
+}
+
+.product-card .dp-plan-price strong {
+    font-size: 1rem;
+}
+
+.product-card .detail-plans-toggle {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    border-radius: 10px;
+}
+
+.product-card .detail-plans-badges {
+    gap: 16px;
+}
+
+.product-card .dp-badge {
+    font-size: 0.72rem;
+}
+
+/* -- Catalog full card adjustments -- */
+.product-card-full .detail-plans-wrapper {
+    margin-top: 0;
+    padding: 0 24px 24px;
+}
+
+/* -- Responsive -- */
+@media (max-width: 768px) {
+    .detail-plans-inner {
+        padding: 16px 8px 12px;
+        border-radius: 12px;
+    }
+
+    .detail-plans-badges {
+        gap: 16px;
+    }
+
+    .dp-badge {
+        font-size: 0.72rem;
+    }
+
+    .detail-plans-table {
+        font-size: 0.75rem;
+    }
+
+    .detail-plans-table th,
+    .detail-plans-table td {
+        padding: 10px 6px;
+    }
+
+    .dp-label-cell {
+        font-size: 0.72rem;
+        width: 32%;
+        padding-left: 8px;
+    }
+
+    .dp-plan-price {
+        font-size: 0.85rem;
+    }
+
+    .dp-plan-price strong {
+        font-size: 0.95rem;
+    }
+
+    .dp-plan-sub {
+        font-size: 0.65rem;
+    }
+
+    .dp-value-cell {
+        font-size: 0.75rem;
+    }
+
+    .product-card-full .detail-plans-wrapper {
+        padding: 0 16px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .detail-plans-table {
+        font-size: 0.7rem;
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .detail-plans-table thead,
+    .detail-plans-table tbody,
+    .detail-plans-table tr {
+        min-width: 360px;
+    }
+
+    .detail-plans-table tr {
+        display: table-row;
+    }
+
+    .dp-label-cell {
+        min-width: 90px;
+    }
+
+    .detail-plans-toggle {
+        padding: 12px 14px;
+        font-size: 0.85rem;
+    }
+}
